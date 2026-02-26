@@ -1,0 +1,36 @@
+# ── Dataset — proprietary, too large, never commit ────────────────
+data
+*.jpg
+*.jpeg
+*.png
+
+# Allow sample tiles and README assets
+!sample_tiles/**
+!assets/*.png
+
+# ── Python ────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+dist/
+build/
+model/
+
+# ── Jupyter ───────────────────────────────────────────────────────
+.ipynb_checkpoints/
+# Note: .ipynb files themselves ARE committed (with outputs baked in)
+
+# ── OS ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+
+# ── Model artifacts — committed (small, needed for inference demo) ─
+# model/ is NOT ignored — pkl files are kept
+# Exclude large intermediate files if any
+*.h5
+*.pt
+*.pth
